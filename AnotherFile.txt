@@ -3,3 +3,25 @@ David added this sentence. one more change
 Allo there fellas, Mike's here - can anyone play?
 
 Why would I ever want to stash something?  Not sure...but its weird...can I apply a stash over and over again?
+
+Stashes (shelvesets in Visual Studio) are great.  Say you've created a whole feature and you're ready to 
+commit the change but not quite sure that is what you *really* want - so you call a code review.  In the meantime
+you get a critical patch you need to push out.  Rather than intertwine the patch with your feature development
+you stash the feature; then code and release the patch.  Then you un-stash the feature and merge it with the patched main
+code branch.  Especially needed when both the patch and the feature change the same source files.  You don't want to 
+commit code from the feature along with the patch if you're not sure you want the feature coded that way - because if you
+don't, then to be really clean you have to remember to back that code out.
+
+You could re-apply a shelveset, although you probably wouldn't.  I have, however, "unshelved" a shelveset more than once
+to see what I had done in a now-unused feature development sprint.  Another cool thing in VS shelvesets is they're easily 
+viewable for other coders.  Example:
+
+When I was originally assigned to eTran 1.0 at first I had pretty much zero requirements docs to work from.  I had really only the idea "make an api endpoint that delivers a transcript in either 
+PDF or XML."  So I made one.  As it turns out, you will see, that is not at all what NSC wanted.  So I shelved the prototype.
+
+A year later - the student self service team wants an API endpoint that delivers a transcript for the "unofficial transcript"
+feature request in self service.  Al says, do you have anything like that?  I say, "yes, check out my shelveset xyz, it's 
+pretty much everything you need."
+
+Unusual circumstance, but I do find myself referring to them often enough to say they're really nice to have.
+
