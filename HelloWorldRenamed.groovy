@@ -1,0 +1,1 @@
+def name='Big World'; println "Hello $name!"
